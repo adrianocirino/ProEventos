@@ -1,0 +1,24 @@
+<h1 class="m-3 text-center">Eventos</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tema</th>
+      <th scope="col">Data do Evento</th>
+      <th scope="col">Capacidade</th>
+      <th scope="col">Lote</th>
+      <th scope="col">Local</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let evento of eventos">
+    <tr>
+      <th scope="row">{{evento.eventoId}}</th>
+      <td>{{evento.tema}}</td>
+      <td>{{evento.dataEvento}}</td>
+      <td>{{evento.qtdPessoa}}</td>
+      <td>{{evento.lote}}</td>
+      <td>{{evento.local}}</td>
+    </tr>
+  </tbody>
+</table>
