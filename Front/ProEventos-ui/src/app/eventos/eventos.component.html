@@ -1,7 +1,7 @@
 <h1 class="m-3 text-center">Eventos</h1>
 <hr>
 
-<div class="form-inline">
+<div class="">
   <div class="form-group mb-2">
     <input
       type="text"
@@ -9,7 +9,6 @@
       placeholder="Buscar"
       [(ngModel)]="filtroLista"
       >
-    <button class="btn btn-outline-success">Buscar</button>
   </div>
 </div>
 
@@ -44,9 +43,9 @@
       <td>{{evento.dataEvento}}</td>
       <td>{{evento.qtdPessoa}}</td>
       <td>{{evento.lote}}</td>
-      <td class="text-center">
-        <i class="fas fa-edit"></i>
-        <i class="fas fa-trash"></i>
+      <td class="">
+        <button type="button" class="btn btn-primary btn-sm mr-2">Editar</button>
+        <button type="button" class="btn btn-danger btn-sm">Excluir</button>
       </td>
     </tr>
   </tbody>
