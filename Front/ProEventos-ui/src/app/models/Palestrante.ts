@@ -1,16 +1,14 @@
+import { Evento } from './evento.model';
 import { Lote } from './Lote';
 import { RedeSocial } from './RedeSocial';
-import { Palestrante } from './Palestrante';
-export interface Evento {
+export interface Palestrante {
   id: number;
-  local: string;
-  dataEvento?: Date;
-  tema: string;
-  qtdPessoas: number;
+  nome: string;
+  descricao: string;
   imagemURL: string;
   telefone: string;
   email: string;
   lotes: Lote[];
   redesSociais: RedeSocial[];
-  palestrantesEventos: Palestrante[];
+  palestrantesEventos: Evento[];
 }
