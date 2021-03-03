@@ -12,17 +12,17 @@ export class EventosComponent implements OnInit {
   eventos: Evento[] = [];
   eventosFiltrados: Evento[] = [];
 
-  filtroListaa = '';
+  filtroListado = '';
   widthImg = 80;
   marginImg = 2;
   showImg = true;
 
   public get filtroLista(): string {
-    return this.filtroListaa;
+    return this.filtroListado;
   }
 
   public set filtroLista(value: string) {
-    this.filtroListaa = value;
+    this.filtroListado = value;
     this.eventosFiltrados = this.filtroLista ? this.filtrarEventos(this.filtroLista) : this.eventos;
   }
 
@@ -49,7 +49,7 @@ export class EventosComponent implements OnInit {
   filtrarEventos(filtrarPor: string): Evento[] {
     filtrarPor = filtrarPor.toLocaleLowerCase();
     return this.eventos.filter(
-      (evento: any) => evento.tema.toLocaleLowerCase().indexOf(filtrarPor) !== -1 ||
+      evento  => evento.tema.toLocaleLowerCase().indexOf(filtrarPor) !== -1 ||
                        evento.local.toLocaleLowerCase().indexOf(filtrarPor) !== -1
     );
   }
