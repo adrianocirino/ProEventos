@@ -13,8 +13,22 @@ export class EventosService {
 
   constructor(private http: HttpClient) { }
 
-  public getEventos(): Observable<Evento[]>{
+  getEventos(): Observable<Evento[]>{
     return this.http.get<Evento[]>(`${this.apiUrl}Eventos`).pipe(
+      map(obj => obj),
+      retry(3)
+    );
+  }
+
+  getEventoByTema(tema: string): Observable<Evento[]>{
+    return this.http.get<Evento[]>(`${this.apiUrl}Eventos/tema/${tema}`).pipe(
+      map(obj => obj),
+      retry(3)
+    );
+  }
+
+  getEventoById(id: number): Observable<Evento[]>{
+    return this.http.get<Evento[]>(`${this.apiUrl}Eventos/${id}`).pipe(
       map(obj => obj),
       retry(3)
     );

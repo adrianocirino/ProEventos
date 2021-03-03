@@ -32,7 +32,7 @@
   </thead>
   <tbody *ngIf="eventos && eventos.length">
     <tr *ngFor="let evento of eventosFiltrados">
-      <th scope="row">{{evento.eventoId}}</th>
+      <th scope="row">{{evento.id}}</th>
       <td>
         <img [collapse]="showImg" [isAnimated]=true src="/assets/{{ evento.imagemURL }}"
         [style.width.px]="widthImg"
@@ -41,8 +41,8 @@
       <td>{{evento.tema}}</td>
       <td>{{evento.local}}</td>
       <td>{{evento.dataEvento}}</td>
-      <td>{{evento.qtdPessoa}}</td>
-      <td>{{evento.lote}}</td>
+      <td>{{evento.qtdPessoas}}</td>
+      <td>{{evento.lotes}}</td>
       <td class="">
         <button type="button" class="btn btn-primary btn-sm mr-2">Editar</button>
         <button type="button" class="btn btn-danger btn-sm">Excluir</button>
