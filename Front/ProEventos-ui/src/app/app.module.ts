@@ -9,7 +9,9 @@ import { AppComponent } from './app.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { PalestrantesComponent } from './palestrantes/palestrantes.component';
 import { NavComponent } from './nav/nav.component';
-import { DateTimeFormatPipe } from './helpers/dateTimeFormat.pipe';
+import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
+
+import { ToastrModule } from 'ngx-toastr';
 
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -22,7 +24,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
       EventosComponent,
       PalestrantesComponent,
       NavComponent,
-      DateTimeFormatPipe
+      DateTimeFormatPipe,
    ],
   imports: [
     BrowserModule,
@@ -33,7 +35,13 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     FormsModule,
     TooltipModule.forRoot(),
     BsDropdownModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      progressBar: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

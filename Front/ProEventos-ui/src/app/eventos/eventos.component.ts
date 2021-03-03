@@ -2,6 +2,7 @@ import { Evento } from './../models/evento.model';
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { EventosService } from '../services/eventos.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-eventos',
@@ -29,7 +30,9 @@ export class EventosComponent implements OnInit {
     this.eventosFiltrados = this.filtroLista ? this.filtrarEventos(this.filtroLista) : this.eventos;
   }
 
-  constructor(private service: EventosService, private modalService: BsModalService) { }
+  constructor(private service: EventosService,
+              private modalService: BsModalService,
+              private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.carregarEventos();
@@ -62,6 +65,7 @@ export class EventosComponent implements OnInit {
 
   confirmar(): void {
     this.modalRef.hide();
+    this.toastr.success('Evento Deletado com sucesso', 'Sucesso');
   }
 
   decline(): void {
