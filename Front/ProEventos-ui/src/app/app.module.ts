@@ -6,8 +6,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EventosComponent } from './eventos/eventos.component';
-import { PalestrantesComponent } from './palestrantes/palestrantes.component';
+import { EventosComponent } from './components/eventos/eventos.component';
+import { PalestrantesComponent } from './components/palestrantes/palestrantes.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ContatosComponent } from './components/contatos/contatos.component';
+
 import { NavComponent } from './nav/nav.component';
 import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
 
@@ -26,6 +30,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
       EventosComponent,
       PalestrantesComponent,
       NavComponent,
+      PerfilComponent,
+      DashboardComponent,
+      ContatosComponent,
       DateTimeFormatPipe,
    ],
   imports: [
