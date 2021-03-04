@@ -9,6 +9,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  {path: 'eventos', redirectTo: 'eventos/lista'},
   {
     path: 'eventos', component: EventosComponent,
     children: [
