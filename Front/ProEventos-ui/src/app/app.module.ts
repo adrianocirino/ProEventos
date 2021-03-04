@@ -11,8 +11,10 @@ import { PalestrantesComponent } from './components/palestrantes/palestrantes.co
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ContatosComponent } from './components/contatos/contatos.component';
+import { TituloComponent } from './shared/titulo/titulo.component';
 
-import { NavComponent } from './nav/nav.component';
+
+import { NavComponent } from './shared/nav/nav.component';
 import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -33,6 +35,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
       PerfilComponent,
       DashboardComponent,
       ContatosComponent,
+      TituloComponent,
       DateTimeFormatPipe,
    ],
   imports: [
