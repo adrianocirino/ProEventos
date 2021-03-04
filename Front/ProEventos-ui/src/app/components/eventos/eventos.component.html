@@ -32,7 +32,7 @@
   <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
-        <th>
+        <th class="d-none d-md-table-cell">
           <button class="btn btn-outline-light btn-sm"
           (click)="ocultarImg()">
             <i class="{{ showImg ? 'fa fa-eye' : 'fa fa-eye-slash' }}"></i>
@@ -41,30 +41,27 @@
         </th>
         <th>#</th>
         <th>Tema</th>
-        <th>Local</th>
+        <th class="d-none d-md-table-cell">Local</th>
         <th>Data</th>
-        <th>Capacidade</th>
-        <th>Lote</th>
+        <th class="d-none d-md-table-cell">Capacidade</th>
+        <th class="d-none d-md-table-cell">Lote</th>
         <th>Ações</th>
       </tr>
     </thead>
     <tbody *ngIf="eventos && eventos.length">
       <tr *ngFor="let evento of eventosFiltrados">
-        <td>
+        <td class="d-none d-md-table-cell">
           <img [collapse]="showImg" [isAnimated]=true src="/assets/{{ evento.imagemURL }}"
           [style.width.px]="widthImg"
           [style.margin.px]="marginImg">
         </td>
         <td scope="row">{{evento.id}}</td>
         <td>{{evento.tema}}</td>
-        <td>{{evento.local}}</td>
+        <td class="d-none d-md-table-cell">{{evento.local}}</td>
         <td>{{evento.dataEvento | DateTimePipe }}</td>
-        <td>{{evento.qtdPessoa}}</td>
-        <td *ngIf="evento.lotes">{{evento.lotes[0].nome}}</td>
+        <td class="d-none d-md-table-cell">{{evento.qtdPessoa}}</td>
+        <td class="d-none d-md-table-cell" *ngIf="evento.lotes">{{evento.lotes[0].nome}}</td>
         <td class="">
-          <button type="button" class="btn btn-primary btn-sm mr-2" tooltip="Editar">
-            <i class="fa fa-edit"></i>
-          </button>
           <button
             type="button"
             class="btn btn-danger btn-sm"
