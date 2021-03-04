@@ -15,6 +15,7 @@ import { TituloComponent } from './shared/titulo/titulo.component';
 
 
 import { NavComponent } from './shared/nav/nav.component';
+import { EventoDetalheComponent } from './components/eventos/evento-detalhe/evento-detalhe.component';
 import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -25,6 +26,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { EventosListaComponent } from './components/eventos/eventos-lista/eventos-lista.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
       ContatosComponent,
       TituloComponent,
       DateTimeFormatPipe,
+      EventoDetalheComponent,
+      EventosListaComponent,
    ],
   imports: [
     BrowserModule,
