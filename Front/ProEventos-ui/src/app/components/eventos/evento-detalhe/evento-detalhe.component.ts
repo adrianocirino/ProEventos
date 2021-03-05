@@ -10,12 +10,12 @@ export class EventoDetalheComponent implements OnInit {
 
   form = this.formBuilder.group({
     tema: [null, [ Validators.required, Validators.minLength(4), Validators.maxLength(50)]],
+    qtdPessoa: [null, [ Validators.required ]],
+    email: [null, [ Validators.required, Validators.email ]],
     local: [null, Validators.required],
     dataEvento: [null, Validators.required],
     imagemURL: [null, Validators.required],
-    qtdPessoa: [null, [ Validators.required, Validators.maxLength(120000)]],
     telefone: [null, Validators.required],
-    email: [null, [ Validators.required, Validators.email ]],
   });
 
   get f(): any {
@@ -25,6 +25,10 @@ export class EventoDetalheComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+  }
+
+  cancelar(): void {
+    this.form.reset();
   }
 
 }
