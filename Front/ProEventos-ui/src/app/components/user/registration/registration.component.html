@@ -34,9 +34,9 @@
             type="text"
             class="form-control"
             placeholder="Insira o Sobrenome nome" />
-            <div *ngIf="f.ultimoNome.errors?.required" class="invalid-feedback">
-              <span>Sobrenome é Obrigatório</span>
-            </div>
+          <div *ngIf="f.ultimoNome.errors?.required" class="invalid-feedback">
+            <span>Sobrenome é Obrigatório</span>
+          </div>
         </div>
       </div>
       <div class="form-group">
@@ -93,9 +93,9 @@
             <div *ngIf="f.confirmeSenha.errors?.required" class="invalid-feedback">
               <span>Confirmar a senha é Obrigatório</span>
             </div>
-            <div *ngIf="f.confirmeSenha.errors?.iguais" class="invalid-feedback">
-              <span>As senham devem ser iguais</span>
-            </div>
+          <div *ngIf="f.confirmeSenha.errors?.iguais" class="invalid-feedback">
+            <span>As senham devem ser iguais</span>
+          </div>
 
         </div>
       </div>
@@ -108,7 +108,7 @@
       <div class="form-row">
         <div class="form-group col-12">
           <button class="btn btn-lg btn-success btn-block px-5">
-            Registar
+            Registrar
           </button>
         </div>
       </div>
